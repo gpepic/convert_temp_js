@@ -10,28 +10,30 @@ var convertCelcius = function(cVal) {
   }
 };
 
-$(function() {
+$(document).ready(function() {
+
   $("form#fahr-to-celc-translator").submit(function(event) {
+    event.preventDefault();
 
     var fVal = parseInt($("input#f-temp").val());
-    // var cVal = parseInt($("input#c-temp").val());
 
     var result = convertFahrenheit(fVal);
 
-    // if(isNaN(fVal)) {
-    //   alert("Please enter a number.");
-    // } else if(isNaN(cVal)){
-    //   alert("Please enter a number.");
-    // } else {
     $("#result").show();
-    // $(".to-celc-result").text(result + "º Celcius" );
-    $(".to-fahr-result").text(result + "º Fahrenheit");
 
-    event.preventDefault();
+    $(".to-fahr-result").text(result + " " + "degrees Fahrenheit");
   });
 
   $ ("form#celc-to-fahr-translator").submit(function(event) {
+    event.preventDefault();
 
+    var cVal = parseInt($("input#c-temp").val());
+
+    var result = convertCelcius(cVal);
+
+    $("#result").show();
+
+    $(".to-celc-result").text(result + " " + "degrees Celcius" );
   });
 });
 
