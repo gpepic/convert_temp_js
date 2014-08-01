@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Temperature Translator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Convert the Temperature:</h1>
+
+      <form id="fahr-to-celc-translator">
+        <div class="form-group">
+          <label for="f-to-c">Enter temperature in Fahrenheit  </label><br>
+          <input id="f-temp" type="number">
+        </div>
+
+        <button type="submit" class="btn">Convert to Celcius
+        </button>
+      </form>
+      <br>
+
+      <form id="celc-to-fahr-translator">
+       <div class="form-group">
+          <label for="c-to-f">Enter temperature in Celcius  </label><br>
+          <input id="c-temp" type="number">
+        </div>
+
+        <button type="submit" class="btn">Convert to Fahrenheit</button>
+      </form>
+
+      <div id="result">
+        <br>
+        <p><span class="to-celc-result"></span> </p>
+        <br>
+        <p><span class="to-fahr-result"></span> </p>
+      </div>
+    </div>
+  </body>
+</html>
